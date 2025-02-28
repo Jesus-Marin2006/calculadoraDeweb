@@ -1,0 +1,48 @@
+function calcular(operacion) {
+   // Obtener valores de los inputs
+   let x = document.querySelector("#num1").value;
+   let y = document.querySelector("#num2").value;
+   let resultadoElemento = document.querySelector("#resultado");
+
+   // Convertir a número
+   x = Number(x);
+   y = Number(y);
+
+   // Validar si los valores son números válidos
+   if (isNaN(x) || isNaN(y) || x === "" || y === "") {
+       resultadoElemento.textContent = " Ingresa dos números válidos.";
+       return;
+   }
+
+   let resultado;
+   let mensaje = "";
+
+   // Operaciones matemáticas
+   switch (operacion) {
+       case "sumar":
+           resultado = x + y;
+           break;
+       case "restar":
+           resultado = x - y;
+           break;
+       case "multiplicar":
+           resultado = x * y;
+           break;
+       case "dividir":
+           if (y === 0) {
+               mensaje = " No se puede dividir por cero.";
+           } else {
+               resultado = x / y;
+           }
+           break;
+       default:
+           mensaje = " Operación no válida.";
+   }
+
+   // Mostrar resultado o mensaje de error
+   if (mensaje) {
+       resultadoElemento.textContent = mensaje;
+   } else {
+       resultadoElemento.textContent = ` Resultado: ${resultado}`;
+   }
+}
