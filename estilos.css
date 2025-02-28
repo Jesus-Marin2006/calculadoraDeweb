@@ -1,0 +1,71 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+  font-size: 24px;
+}
+
+/* Estilos para etiquetas e inputs */
+label {
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Botones */
+button {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 1%;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Colores para cada botón */
+.boton_Sumar { background: #27ae60; }
+.boton_Restar { background: #e74c3c; }
+.boton_Multiplicar { background: #f39c12; }
+.boton_Dividir { background: #2980b9; }
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Resultado */
+#resultado {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
